@@ -28,7 +28,7 @@ Get the terminal window size:
 winsize = LibC::Winsize.new
 
 begin
-  IOCTL.ioctl(STDOUT.fd, IOCTLS::TIOCGWINSZ, pointerof(winsize))
+  IOCTL.ioctl(STDOUT.fd, IOCTL::TIOCGWINSZ, pointerof(winsize))
 rescue error : IOCTL::Error
   STDERR.puts error.message
   exit -1
