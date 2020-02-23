@@ -1,4 +1,4 @@
-# ioctl
+# ioctl.cr
 
 libc's [ioctl] for crystal.
 
