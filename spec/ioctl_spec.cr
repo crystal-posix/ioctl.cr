@@ -2,8 +2,6 @@ require "./spec_helper"
 
 Spectator.describe IOCTL do
   describe ".ioctl" do
-    subject { described_class }
-
     context "when given a valid ioctl request number" do
       it "must populate the given pointer" do
         winsize = LibC::Winsize.new
