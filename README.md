@@ -9,7 +9,7 @@ libc's [ioctl] for crystal.
    ```yaml
    dependencies:
      ioctl:
-       github: postmodern/ioctl
+       github: postmodern/ioctl.cr
    ```
 
 2. Run `shards install`
