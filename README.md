@@ -1,6 +1,6 @@
 # ioctl.cr
 
-libc's [ioctl] for crystal.
+libc's [ioctl] for [crystal].
 
 ## Installation
 
@@ -71,3 +71,4 @@ puts "Cols: #{winsize.ws_col}"
 - [Postmodern](https://github.com/postmodern) - creator and maintainer
 
 [ioctl]: https://www.unix.com/man-page/v7/2/ioctl/
+[crystal]: https://crystal-lang.org/
