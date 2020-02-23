@@ -18,6 +18,22 @@ libc's [ioctl] for crystal.
 
 ```crystal
 require "ioctl"
+
+output = MyStruct.new
+
+begin
+  IOCTL.ioctl(fd, IOCTL::..., pointerof(output))
+request error : IOCTL::Error
+  # ...
+end
+```
+
+Returning `-1` instead of raising an exception:
+
+```crystal
+if LibC.ioctl(fd, IOCTL::..., pointerof(output)) == -1
+  # ...
+end
 ```
 
 ### Examples
