@@ -2,6 +2,26 @@
 
 libc's [ioctl] for [crystal].
 
+## Features
+
+### Functions
+
+* Maps in the libc `ioctl` function.
+* Provides C equivalent macros for defining and working with ioctl numbers:
+  * `ioctl_ioc(dir,type,nr,size)`
+  * `ioctl_ioc_typecheck(t)`
+  * `ioctl_io(type,nr)`
+  * `ioctl_ior(type,nr,size)`
+  * `ioctl_iow(type,nr,size)`
+  * `ioctl_iowr(type,nr,size)`
+  * `ioctl_ior_bad(type,nr,size)`
+  * `ioctl_iow_bad(type,nr,size)`
+  * `ioctl_iowr_bad(type,nr,size)`
+  * `ioctl_dir(nr)`
+  * `ioctl_type(nr)`
+  * `ioctl_nr(nr)`
+  * `ioctl_size(nr)`
+
 ## Installation
 
 1. Add the dependency to your `shard.yml`:
