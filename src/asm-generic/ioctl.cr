@@ -67,31 +67,31 @@ end
 # means userland is reading and kernel is writing.
 
 macro ioctl_io(type,nr)
-  ioctl_ioc(IOCTL::IOC_NONE,(type),(nr),0)
+  ioctl_ioc(IOCTL::IOC_NONE,{{ type }},{{ nr }},0)
 end
 
 macro ioctl_ior(type,nr,size)
-  ioctl_ioc(IOCTL::IOC_READ,(type),(nr),(ioctl_ioc_typecheck(size)))
+  ioctl_ioc(IOCTL::IOC_READ,{{ type }},{{ nr }},ioctl_ioc_typecheck({{ size }}))
 end
 
 macro ioctl_iow(type,nr,size)
-  ioctl_ioc(IOCTL::IOC_WRITE,(type),(nr),(ioctl_ioc_typecheck(size)))
+  ioctl_ioc(IOCTL::IOC_WRITE,{{ type }},{{ nr }},ioctl_ioc_typecheck({{ size }}))
 end
 
 macro ioctl_iowr(type,nr,size)
-  ioctl_ioc(IOCTL::IOC_READ | IOCTL::IOC_WRITE,(type),(nr),(ioctl_ioc_typecheck(size)))
+  ioctl_ioc(IOCTL::IOC_READ | IOCTL::IOC_WRITE,{{ type }},{{ nr }},ioctl_ioc_typecheck({{ size }}))
 end
 
 macro ioctl_ior_bad(type,nr,size)
-  ioctl_ioc(IOCTL::IOC_READ,(type),(nr),sizeof(size))
+  ioctl_ioc(IOCTL::IOC_READ,{{ type }},{{ nr }},sizeof({{ size }}))
 end
 
 macro ioctl_iow_bad(type,nr,size)
-  ioctl_ioc(IOCTL::IOC_WRITE,(type),(nr),sizeof(size))
+  ioctl_ioc(IOCTL::IOC_WRITE,{{ type }},{{ nr }},sizeof({{ size }}))
 end
 
 macro ioctl_iowr_bad(type,nr,size)
-  ioctl_ioc(IOCTL::IOC_READ | IOCTL::IOC_WRITE,(type),(nr),sizeof(size))
+  ioctl_ioc(IOCTL::IOC_READ | IOCTL::IOC_WRITE,{{ type }},{{ nr }},sizeof({{ size }}))
 end
 
 # used to decode ioctl numbers..
