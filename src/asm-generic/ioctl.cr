@@ -51,10 +51,16 @@ module IOCTL
 end
 
 macro ioctl_ioc(dir,type,nr,size)
+  {% begin %}
 	((({{ dir }})  << IOCTL::IOC_DIRSHIFT) | \
+   {% if type.is_a?(CharLiteral) %}
+   (({{ type }}.ord) << IOCTL::IOC_TYPESHIFT) | \
+   {% else %}
 	 (({{ type }}) << IOCTL::IOC_TYPESHIFT) | \
+   {% end %}
 	 (({{ nr }})   << IOCTL::IOC_NRSHIFT) | \
 	 (({{ size }}) << IOCTL::IOC_SIZESHIFT))
+  {% end %}
 end
 
 macro ioctl_ioc_typecheck(t)
