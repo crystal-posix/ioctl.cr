@@ -11,8 +11,8 @@ module IOCTL
   extend self
 
   @[Raises("Error")]
-  def ioctl(fd, request, output)
-    if LibC.ioctl(fd, request, output) == -1
+  def ioctl(fd, request, *arguments)
+    if LibC.ioctl(fd, request, *arguments) == -1
       raise Error.new(String.new(LibC.strerror(Errno.value)))
     end
   end
