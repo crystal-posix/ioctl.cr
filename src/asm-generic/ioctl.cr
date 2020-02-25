@@ -52,7 +52,7 @@ end
 
 macro ioctl_ioc(dir,type,nr,size)
 	((({{ dir }})  << IOCTL::IOC_DIRSHIFT) | \
-	 (({{ type}}) << IOCTL::IOC_TYPESHIFT) | \
+	 (({{ type }}) << IOCTL::IOC_TYPESHIFT) | \
 	 (({{ nr }})   << IOCTL::IOC_NRSHIFT) | \
 	 (({{ size }}) << IOCTL::IOC_SIZESHIFT))
 end
