@@ -8,19 +8,21 @@ libc's [ioctl] for [crystal].
 
 * Maps in the libc `ioctl` function.
 * Provides C equivalent macros for defining and working with ioctl numbers:
-  * `ioctl_ioc(dir,type,nr,size)`
-  * `ioctl_ioc_typecheck(t)`
-  * `ioctl_io(type,nr)`
-  * `ioctl_ior(type,nr,size)`
-  * `ioctl_iow(type,nr,size)`
-  * `ioctl_iowr(type,nr,size)`
-  * `ioctl_ior_bad(type,nr,size)`
-  * `ioctl_iow_bad(type,nr,size)`
-  * `ioctl_iowr_bad(type,nr,size)`
-  * `ioctl_dir(nr)`
-  * `ioctl_type(nr)`
-  * `ioctl_nr(nr)`
-  * `ioctl_size(nr)`
+
+  | C           | Crystal                       |
+  |-------------|-------------------------------|
+  | `_IOC`      | `ioctl_ioc(dir,type,nr,size)` |
+  | `_IO`       | `ioctl_io(type,nr)`           |
+  | `_IOR`      | `ioctl_ior(type,nr,size)`     |
+  | `_IOW`      | `ioctl_iow(type,nr,size)`     |
+  | `_IOWR`     | `ioctl_iowr(type,nr,size)`    |
+  | `_IOR_BAD`  | `ioctl_ior_bad(type,nr,size)` |
+  | `_IOW_BAD`  | `ioctl_iow_bad(type,nr,size)` |
+  | `_IOWR_BAD` | `ioctl_iowr_bad(type,nr,size)`|
+  | `_IOC_DIR`  | `ioctl_dir(nr)`               |
+  | `_IOC_TYPE` | `ioctl_type(nr)`              |
+  | `_IOC_NR`   | `ioctl_nr(nr)`                |
+  | `_IOC_SIZE` | `ioctl_size(nr)`              |
 
 ## Installation
 
