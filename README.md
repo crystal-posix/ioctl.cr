@@ -2,7 +2,7 @@
 
 * [Source](https://github.com/postmodern/ioctl.cr)
 * [Issues](https://github.com/postmodern/ioctl.cr/issues)
-* [Docs](https://postmodern.github.io/docs/ioctrl.cr/)
+* [Docs](https://postmodern.github.io/docs/ioctrl.cr/index.html)
 
 libc's [ioctl] for [Crystal][crystal].
 
