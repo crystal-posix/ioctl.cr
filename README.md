@@ -1,5 +1,9 @@
 # ioctl.cr
 
+* [Source](https://github.com/postmodern/ioctl.cr)
+* [Issues](https://github.com/postmodern/ioctl.cr/issues)
+* [Docs](https://postmodern.github.io/docs/ioctrl.cr/)
+
 libc's [ioctl] for [Crystal][crystal].
 
 ## Features
