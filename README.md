@@ -92,5 +92,5 @@ puts "Cols: #{winsize.ws_col}"
 
 - [Postmodern](https://github.com/postmodern) - creator and maintainer
 
-[ioctl]: https://www.unix.com/man-page/v7/2/ioctl/
+[ioctl]: http://man7.org/linux/man-pages/man2/ioctl.2.html
 [crystal]: https://crystal-lang.org/
