@@ -1,6 +1,6 @@
 # ioctl.cr
 
-libc's [ioctl] for [crystal].
+libc's [ioctl] for [Crystal][crystal].
 
 ## Features
 
