@@ -1,6 +1,9 @@
 name: ioctl
 version: 0.1.0
 
+description: |
+  crystal bindings for libc's ioctl(2)
+
 authors:
   - Postmodern <postmodern.mod3@gmail.com>
 
