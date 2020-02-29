@@ -16,7 +16,7 @@ Spectator.describe IOCTL do
     context "when given an invalid ioctl request number" do
       it do
         expect {
-          subject.ioctl(1, -1, nil)
+          subject.ioctl(1, 0xffffffff_u32, nil)
         }.to raise_error(IOCTL::Error)
       end
     end
