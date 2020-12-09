@@ -70,10 +70,10 @@ module IOCTLS
   TCSETX       = 0x5433_u32
   TCSETXF      = 0x5434_u32
   TCSETXW      = 0x5435_u32
-  TIOCSIG      = ioctl_IOW('T', 0x36, Int)  # pty: generate signal
+  TIOCSIG      = ioctl_iow('T', 0x36, Int)  # pty: generate signal
   TIOCVHANGUP	 = 0x5437_u32
-  TIOCGPKT     = ioctl_IOR('T', 0x38, Int) # Get packet mode state
-  TIOCGPTLCK   = ioctl_IOR('T', 0x39, Int) # Get Pty lock state
+  TIOCGPKT     = ioctl_ior('T', 0x38, Int) # Get packet mode state
+  TIOCGPTLCK   = ioctl_ior('T', 0x39, Int) # Get Pty lock state
   TIOCGEXCL    = ioctl_ior('T', 0x40, Int) # Get exclusive mode state
   TIOCGPTPEER	 = ioctl_io('T', 0x41) # Safely open the slave
   # TODO: 
