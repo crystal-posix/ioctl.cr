@@ -7,7 +7,7 @@ description: |
 authors:
   - Postmodern <postmodern.mod3@gmail.com>
 
-crystal: 0.33.0
+crystal: ">= 0.33.0"
 
 license: MIT
 
