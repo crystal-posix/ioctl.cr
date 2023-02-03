@@ -1,5 +1,5 @@
 name: ioctl
-version: 0.1.2
+version: 1.0.0
 
 description: |
   crystal bindings for libc's ioctl(2)
@@ -10,8 +10,3 @@ authors:
 crystal: ">= 0.33.0"
 
 license: MIT
-
-development_dependencies:
-  spectator:
-    gitlab: arctic-fox/spectator
-    version: "~> 0.9, >= 0.9.9"
