@@ -8,25 +8,20 @@ libc's [ioctl] for [Crystal][crystal].
 
 ## Features
 
-### Functions
-
 * Maps in the libc `ioctl` function.
-* Provides C equivalent macros for defining and working with ioctl numbers:
+* Provides C equivalent methods for defining and working with ioctl numbers:
 
-  | C           | Crystal                       |
-  |-------------|-------------------------------|
-  | `_IOC`      | `ioctl_ioc(dir,type,nr,size)` |
-  | `_IO`       | `ioctl_io(type,nr)`           |
-  | `_IOR`      | `ioctl_ior(type,nr,size)`     |
-  | `_IOW`      | `ioctl_iow(type,nr,size)`     |
-  | `_IOWR`     | `ioctl_iowr(type,nr,size)`    |
-  | `_IOR_BAD`  | `ioctl_ior_bad(type,nr,size)` |
-  | `_IOW_BAD`  | `ioctl_iow_bad(type,nr,size)` |
-  | `_IOWR_BAD` | `ioctl_iowr_bad(type,nr,size)`|
-  | `_IOC_DIR`  | `ioctl_dir(nr)`               |
-  | `_IOC_TYPE` | `ioctl_type(nr)`              |
-  | `_IOC_NR`   | `ioctl_nr(nr)`                |
-  | `_IOC_SIZE` | `ioctl_size(nr)`              |
+  | C           | Crystal                         |
+  |-------------|---------------------------------|
+  | `_IOC`      | `IOCTL::_IOC(dir,type,nr,size)` |
+  | `_IO`       | `IOCTL::_IOC(type,nr)`          |
+  | `_IOR`      | `IOCTL::_IOR(type,nr,size)`     |
+  | `_IOW`      | `IOCTL::_IOW(type,nr,size)`     |
+  | `_IOWR`     | `IOCTL::_IOWR(type,nr,size)`    |
+  | `_IOC_DIR`  | `IOCTL::_IOC_DIR(dir)`          |
+  | `_IOC_TYPE` | `IOCTL::_IOC_TYPE(type)`        |
+  | `_IOC_NR`   | `IOCTL::_IOC_NR(nr)`            |
+  | `_IOC_SIZE` | `IOCTL::_IOC_SIZE(size)`        |
 
 ## Installation
 
