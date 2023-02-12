@@ -1,16 +1,24 @@
 require "../src/ioctl"
 require "spec"
+require "socket"
 
 describe IOCTL do
   describe ".ioctl" do
     context "when given a valid ioctl request number" do
-      it "must populate the given pointer" do
-        winsize = LibC::Winsize.new
+      if STDOUT.tty?
+        it "must populate the given pointer" do
+          winsize = LibC::Winsize.new
 
-        IOCTL.ioctl(STDOUT.fd, IOCTLS::TIOCGWINSZ, pointerof(winsize))
+          IOCTL.ioctl(STDOUT.fd, IOCTLS::TIOCGWINSZ, pointerof(winsize))
 
-        (winsize.ws_row > 0).should be_true
-        (winsize.ws_col > 0).should be_true
+          (winsize.ws_row > 0).should be_true
+          (winsize.ws_col > 0).should be_true
+        end
+      end
+
+      it "set FIOCLEX" do
+        # FIOCLEX = 0x5451
+        IOCTL.ioctl(STDOUT.fd, 0x5451)
       end
     end
 
