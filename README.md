@@ -13,15 +13,15 @@ libc's [ioctl] for [Crystal][crystal].
 
   | C           | Crystal                         |
   |-------------|---------------------------------|
-  | `_IOC`      | `IOCTL::_IOC(dir,type,nr,size)` |
-  | `_IO`       | `IOCTL::_IOC(type,nr)`          |
-  | `_IOR`      | `IOCTL::_IOR(type,nr,size)`     |
-  | `_IOW`      | `IOCTL::_IOW(type,nr,size)`     |
-  | `_IOWR`     | `IOCTL::_IOWR(type,nr,size)`    |
-  | `_IOC_DIR`  | `IOCTL::_IOC_DIR(dir)`          |
-  | `_IOC_TYPE` | `IOCTL::_IOC_TYPE(type)`        |
-  | `_IOC_NR`   | `IOCTL::_IOC_NR(nr)`            |
-  | `_IOC_SIZE` | `IOCTL::_IOC_SIZE(size)`        |
+  | `_IOC`      | `IOCTL._IOC(dir,type,nr,size)` |
+  | `_IO`       | `IOCTL._IO(type,nr)`          |
+  | `_IOR`      | `IOCTL._IOR(type,nr,size)`     |
+  | `_IOW`      | `IOCTL._IOW(type,nr,size)`     |
+  | `_IOWR`     | `IOCTL._IOWR(type,nr,size)`    |
+  | `_IOC_DIR`  | `IOCTL._IOC_DIR(dir)`          |
+  | `_IOC_TYPE` | `IOCTL._IOC_TYPE(type)`        |
+  | `_IOC_NR`   | `IOCTL._IOC_NR(nr)`            |
+  | `_IOC_SIZE` | `IOCTL._IOC_SIZE(size)`        |
 
 ## Installation
 
